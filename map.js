@@ -1,12 +1,8 @@
 var custom_map;
 const locations = [];
-const markers = [];
-let sliderValue = 50;
+let sliderValue;
 
 var slide = document.getElementById("custom-map-slide");
-
-
-
 
 function initialiseMap() {
   jQuery.getJSON(
@@ -33,7 +29,6 @@ function initialiseMap() {
 }
 
 function setLocations(custom_map, locations) {
-  //console.log('i am getting called')
   var bounds = new google.maps.LatLngBounds();
   for (var i = 0; i < locations.length; i++) {
     var new_marker = createMarker(custom_map, locations[i]);
@@ -43,7 +38,6 @@ function setLocations(custom_map, locations) {
 }
 
 function createMarker(custom_map, location) {
- 
   var position = {
     lat: parseFloat(location.latitude),
     lng: parseFloat(location.longitude)
@@ -55,13 +49,14 @@ function createMarker(custom_map, location) {
       value:location.year,
       visible: sliderValue * 1 >= location.year
   });
-  markers.push(marker)
-
-
   return marker;
 }
 
 slide.addEventListener("change", (el) => {
   sliderValue = el.target.value * 1;
   setLocations(custom_map, locations);
+  const changeYear = document.getElementById('changeYear');
+  changeYear.innerHTML = sliderValue;
 });
+
+
