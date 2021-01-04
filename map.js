@@ -41,8 +41,6 @@ function createMarker(custom_map, location) {
       lng: parseFloat(location.longitude),
    };
 
-   console.log(location.logo);
-
    var icon = '';
    if (location.logo == 'BWW' || location.logo == 'Buffalo Wild Wings') {
       icon = 'BWW.png';
