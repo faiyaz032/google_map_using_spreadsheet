@@ -43,21 +43,21 @@ function createMarker(custom_map, location) {
 
    var icon = '';
    if (location.logo == 'BWW' || location.logo == 'Buffalo Wild Wings') {
-      icon = 'BWW.png';
+      icon = 'https://buildablecompanies.com/wp-content/uploads/2021/01/BWW.png';
    } else if (location.logo == 'CSC') {
-      icon = 'CSC.png';
+      icon = 'https://buildablecompanies.com/wp-content/uploads/2021/01/CSC.png';
    } else if (location.logo == 'Wet Willies' || location.logo == 'Wet Wiillies') {
-      icon = 'wet-willies.png';
+      icon = 'https://buildablecompanies.com/wp-content/uploads/2021/01/wet-willies.png';
    } else if (location.logo == "Wendy's") {
-      icon = 'wendys.png';
+      icon = 'https://buildablecompanies.com/wp-content/uploads/2021/01/wendys.png';
    } else if (location.logo == 'Snooze') {
-      icon = 'snooze.png';
+      icon = 'https://buildablecompanies.com/wp-content/uploads/2021/01/snooze.png';
    } else if (location.logo == 'RBA' || location.logo == "Arby's") {
-      icon = 'arbys.png';
+      icon = 'https://buildablecompanies.com/wp-content/uploads/2021/01/arbys.png';
    } else if (location.logo == 'Inspire') {
       icon = 'inspire.png';
    } else if (location.logo == 'R-Taco') {
-      icon = 'r-taco.png';
+      icon = 'https://buildablecompanies.com/wp-content/uploads/2021/01/r-taco.png';
    }
 
    var marker = new google.maps.Marker({
