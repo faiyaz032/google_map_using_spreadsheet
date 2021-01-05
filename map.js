@@ -27,12 +27,11 @@ https: function initialiseMap() {
 }
 
 function setLocations(custom_map, locations) {
-   var bounds = new google.maps.LatLngBounds();
+   var bounds = new google.maps.LatLngBounds(new google.maps.LatLng(44.5, -89.5));
    for (var i = 0; i < locations.length; i++) {
       var new_marker = createMarker(custom_map, locations[i]);
       bounds.extend(new_marker.position);
    }
-   custom_map.fitBounds(bounds);
 }
 
 function createMarker(custom_map, location) {
@@ -63,7 +62,6 @@ function createMarker(custom_map, location) {
    var marker = new google.maps.Marker({
       position: position,
       map: custom_map,
-      value: location.year,
       visible: sliderValue * 1 >= location.year,
       icon: icon,
    });
